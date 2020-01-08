@@ -17,13 +17,13 @@ public class TestProducer {
     public static void main(String[] args) {
 
         // 读取spring-queue 配置文件
-        ApplicationContext context = new ClassPathXmlApplicationContext("classpath:applicationContext-queue.xml");
+        ApplicationContext context = new ClassPathXmlApplicationContext("classpath:applicationContext-queue-listener.xml");
         JmsTemplate jmsTemplate = context.getBean(JmsTemplate.class);
 //        1、发送到默认的目的地
 //        jmsTemplate.send(final MessageCreator messageCreator)
         jmsTemplate.send(new MessageCreator() {
             public Message createMessage(Session session) throws JMSException {
-                TextMessage textMessage = session.createTextMessage("spring 和 activemq-queue 整合");
+                TextMessage textMessage = session.createTextMessage("spring 和 activemq-queue 整合哈哈哈哈哈哈");
                 textMessage.setStringProperty("flag","加急");
                 return textMessage;
             }

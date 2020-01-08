@@ -231,4 +231,5 @@ Object object = jmsTemplate.receiveAndConvert();
 - 如何给非默认目的地 发送消息
 
 
-
+----------
+##  实现动态监听

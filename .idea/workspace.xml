@@ -2,16 +2,16 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="48c3710a-fdea-451f-a6a4-0c844707158a" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/nn/topic/TestTopicCustomer.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/nn/topic/TestTopicProducer.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/applicationContext-topic.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/nn/listener/TestQueueListenerProvider.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/nn/listener/queue/listeners/MyQueueListener.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/applicationContext-queue-listener.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/activemq-data/localhost/KahaDB/db-1.log" beforeDir="false" afterPath="$PROJECT_DIR$/activemq-data/localhost/KahaDB/db-1.log" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/activemq-data/localhost/KahaDB/db.data" beforeDir="false" afterPath="$PROJECT_DIR$/activemq-data/localhost/KahaDB/db.data" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/activemq-data/localhost/KahaDB/db.redo" beforeDir="false" afterPath="$PROJECT_DIR$/activemq-data/localhost/KahaDB/db.redo" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/nn/queue/TestCustomer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/nn/queue/TestCustomer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/nn/queue/TestCustomer.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/nn/queue/TestCustomer.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/nn/queue/TestProducer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/nn/queue/TestProducer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/nn/queue/TestProducer$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/nn/queue/TestProducer$1.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -66,25 +66,17 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/main/resources" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="settings.editor.selected.configurable" value="editor.preferences.gutterIcons" />
   </component>
-  <component name="RunManager" selected="Application.TestTopicProducer">
-    <configuration name="MyActiveMQBroker" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.nn.broker.MyActiveMQBroker" />
-      <module name="activemq-spring" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.nn.broker.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="F:\nn\workspace\IDEA\newSpace1\activemq-spring\src\main\resources" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Application.TestProducer">
     <configuration name="TestCustomer" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.nn.queue.TestCustomer" />
       <module name="activemq-spring" />
@@ -104,6 +96,19 @@
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="com.nn.queue.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="TestQueueListenerProvider" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.nn.listener.TestQueueListenerProvider" />
+      <module name="activemq-spring" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.nn.listener.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -139,11 +144,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.TestProducer" />
+        <item itemvalue="Application.TestQueueListenerProvider" />
         <item itemvalue="Application.TestTopicProducer" />
         <item itemvalue="Application.TestTopicCustomer" />
         <item itemvalue="Application.TestCustomer" />
-        <item itemvalue="Application.TestProducer" />
-        <item itemvalue="Application.MyActiveMQBroker" />
       </list>
     </recent_temporary>
   </component>
@@ -169,7 +174,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1578464219047</updated>
-      <workItem from="1578464222844" duration="8730000" />
+      <workItem from="1578464222844" duration="10226000" />
     </task>
     <task id="LOCAL-00001" summary="spring 整合 activemq">
       <created>1578470780766</created>
@@ -178,7 +183,14 @@
       <option name="project" value="LOCAL" />
       <updated>1578470780766</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="主题 topic">
+      <created>1578473043359</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1578473043359</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -186,41 +198,42 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="spring 整合 activemq" />
-    <option name="LAST_COMMIT_MESSAGE" value="spring 整合 activemq" />
+    <MESSAGE value="主题 topic" />
+    <option name="LAST_COMMIT_MESSAGE" value="主题 topic" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="765" y="249" key="#com.intellij.ide.util.MemberChooser" timestamp="1578472368425">
+    <state x="765" y="249" key="#com.intellij.ide.util.MemberChooser" timestamp="1578473505001">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state x="765" y="249" key="#com.intellij.ide.util.MemberChooser/1920.131.1366.768/0.0.1920.1080@0.0.1920.1080" timestamp="1578472368425" />
-    <state x="516" y="132" key="CommitChangelistDialog2" timestamp="1578470777886">
+    <state x="765" y="249" key="#com.intellij.ide.util.MemberChooser/1920.131.1366.768/0.0.1920.1080@0.0.1920.1080" timestamp="1578473505001" />
+    <state x="516" y="132" key="CommitChangelistDialog2" timestamp="1578473040861">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state x="516" y="132" key="CommitChangelistDialog2/1920.131.1366.768/0.0.1920.1080@0.0.1920.1080" timestamp="1578470777886" />
+    <state x="516" y="132" key="CommitChangelistDialog2/1920.131.1366.768/0.0.1920.1080@0.0.1920.1080" timestamp="1578473040861" />
     <state x="740" y="281" key="FileChooserDialogImpl" timestamp="1578470702016">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
     <state x="740" y="281" key="FileChooserDialogImpl/1920.131.1366.768/0.0.1920.1080@0.0.1920.1080" timestamp="1578470702016" />
-    <state width="1860" height="456" key="GridCell.Tab.0.bottom" timestamp="1578472526351">
+    <state width="1860" height="199" key="GridCell.Tab.0.bottom" timestamp="1578474486091">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state width="1860" height="456" key="GridCell.Tab.0.bottom/1920.131.1366.768/0.0.1920.1080@0.0.1920.1080" timestamp="1578472526351" />
-    <state width="1860" height="456" key="GridCell.Tab.0.center" timestamp="1578472526351">
+    <state width="1860" height="199" key="GridCell.Tab.0.bottom/1920.131.1366.768/0.0.1920.1080@0.0.1920.1080" timestamp="1578474486091" />
+    <state width="1860" height="199" key="GridCell.Tab.0.center" timestamp="1578474486091">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state width="1860" height="456" key="GridCell.Tab.0.center/1920.131.1366.768/0.0.1920.1080@0.0.1920.1080" timestamp="1578472526351" />
-    <state width="1860" height="456" key="GridCell.Tab.0.left" timestamp="1578472526351">
+    <state width="1860" height="199" key="GridCell.Tab.0.center/1920.131.1366.768/0.0.1920.1080@0.0.1920.1080" timestamp="1578474486091" />
+    <state width="1860" height="199" key="GridCell.Tab.0.left" timestamp="1578474486091">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state width="1860" height="456" key="GridCell.Tab.0.left/1920.131.1366.768/0.0.1920.1080@0.0.1920.1080" timestamp="1578472526351" />
-    <state width="1860" height="456" key="GridCell.Tab.0.right" timestamp="1578472526351">
+    <state width="1860" height="199" key="GridCell.Tab.0.left/1920.131.1366.768/0.0.1920.1080@0.0.1920.1080" timestamp="1578474486091" />
+    <state width="1860" height="199" key="GridCell.Tab.0.right" timestamp="1578474486091">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state width="1860" height="456" key="GridCell.Tab.0.right/1920.131.1366.768/0.0.1920.1080@0.0.1920.1080" timestamp="1578472526351" />
-    <state x="552" y="273" key="Vcs.Push.Dialog.v2" timestamp="1578470810380">
+    <state width="1860" height="199" key="GridCell.Tab.0.right/1920.131.1366.768/0.0.1920.1080@0.0.1920.1080" timestamp="1578474486091" />
+    <state x="552" y="273" key="Vcs.Push.Dialog.v2" timestamp="1578473055326">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state x="552" y="273" key="Vcs.Push.Dialog.v2/1920.131.1366.768/0.0.1920.1080@0.0.1920.1080" timestamp="1578470810380" />
+    <state x="552" y="273" key="Vcs.Push.Dialog.v2/1920.131.1366.768/0.0.1920.1080@0.0.1920.1080" timestamp="1578473055326" />
     <state x="623" y="239" width="672" height="678" key="search.everywhere.popup" timestamp="1578472441914">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
