@@ -232,4 +232,47 @@ Object object = jmsTemplate.receiveAndConvert();
 
 
 ----------
-##  实现动态监听
+##  实现动态监听：以 队列queue 为例
+
+##### 1、创建一个监听类（消费者）（实现 MessageListener 接口）并实现方法
+###### 该监听类 就是一个动态的消费者
+- com.nn.listener.queue.listeners.MyQueueListener
+```$xslt
+public class MyQueueListener implements MessageListener {
+    public void onMessage(Message message) {
+        if(message instanceof TextMessage){
+            TextMessage textMessage = (TextMessage) message;
+            try {
+                System.out.println("接收到的消息为："+textMessage.getText());
+            } catch (JMSException e) {
+                e.printStackTrace();
+            }
+        }
+    }
+}
+```
+
+##### 2、创建 applicationContext-queue-listener.xml 配置文件
+- 该配置文件 和上面的（queue、topic 配置文件相同，只需要 加上以下 监听器 配置）
+```$xslt
+ <!--    声明一个自定义监听器对象-->
+    <bean id="myQueueListener" class="com.nn.listener.queue.listeners.MyQueueListener"></bean>
+
+<!--    配置监听器容器-->
+    <bean id="queueListenerContainer" class="org.springframework.jms.listener.DefaultMessageListenerContainer">
+<!--        注入 连接工厂-->
+        <property name="connectionFactory" ref="jmsFactory"></property>
+
+<!--        注入 消息 发送的默认目的地-->
+        <property name="destination" ref="destinationQueue"></property>
+
+<!--        注入 自定义监听器-->
+        <property name="messageListener" ref="myQueueListener"></property>
+    </bean>
+```
+
+##### 3、创建 生产者
+- com.nn.listener.queue.TestQueueListenerProvider
+    - 生产者 于上面的一样，修改加载的配置文件applicationContext-queue-listener.xml 即可
+    
+###### 生产者 发送消息 被监听器监听到 自动接收消息
